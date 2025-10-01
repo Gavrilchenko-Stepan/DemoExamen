@@ -61,9 +61,12 @@ namespace DemoTesting
 
                 ///Д.З. сделать проверку Verify
                 view.Setup(v => v.ShowClientInfo(client));
-                mockViews.Add(view.Object);
+                mockViews.Add(view);
             }
-            var clientPresenter = new ClientPresenter(mockModel.Object, mockViews.ConvertAll(v => v.Odject));
+
+            var viewObjects = mockViews.ConvertAll(v => v.Object);
+
+            var clientPresenter = new ClientPresenter(mockModel.Object, viewObjects);
 
             for (int i = 0; i < countClients; ++i)
             {
