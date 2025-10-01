@@ -20,7 +20,7 @@ namespace DemoLib.Presenters
                 for (int i = 0; i < allClients.Count; ++i)
                 {
                     Client client = allClients[i];
-                    //views[i].ShowClientInfo(client);
+                    views[i].ShowClientInfo(client);
                 }
             }
         }

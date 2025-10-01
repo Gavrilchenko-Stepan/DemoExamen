@@ -27,5 +27,10 @@ namespace DemoProject
 
             presenter_ = new ClientPresenter(new MemoryClientsModel(), cards);
         }
+
+        private void MainForm_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
