@@ -71,10 +71,13 @@
             // 
             // OrdersTable
             // 
+            this.OrdersTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.OrdersTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.OrdersTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.OrdersTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OrdersTable.Location = new System.Drawing.Point(0, 35);
             this.OrdersTable.Name = "OrdersTable";
+            this.OrdersTable.RowHeadersVisible = false;
             this.OrdersTable.Size = new System.Drawing.Size(800, 415);
             this.OrdersTable.TabIndex = 1;
             // 
