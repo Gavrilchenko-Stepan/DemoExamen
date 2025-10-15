@@ -64,6 +64,9 @@ namespace DemoTesting
                 mockViews.Add(view.Object);
             }
             var clientPresenter = new ClientPresenter(mockModel.Object, mockViews);
+
+            mockModel.Verify(m => m.ReadAllClients(), Times.Once());
+            ///mockModel.Verify(m => m.GetClientsCount(), Times.Once());
         }
     }
 }

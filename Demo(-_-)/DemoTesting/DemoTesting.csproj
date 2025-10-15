@@ -69,6 +69,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClientCard\ClientCard.csproj">
+      <Project>{b9cd21d9-b083-4909-b4f1-7f6cf2d46fda}</Project>
+      <Name>ClientCard</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DemoLib\DemoLib.csproj">
       <Project>{56f8405b-b458-48db-ba8e-cb8ec167372e}</Project>
       <Name>DemoLib</Name>
