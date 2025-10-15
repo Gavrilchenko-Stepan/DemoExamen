@@ -34,7 +34,7 @@ namespace DemoLib.Presenters
                 string clientNameToLower = client.Name.ToLower();
                 string text = searchText.ToLower();
 
-                if(clientNameToLower.Contains(text))
+                if (clientNameToLower.Contains(text))
                 {
                     view.ShowView();
                 }
@@ -46,6 +46,25 @@ namespace DemoLib.Presenters
         }
 
         /// Д.З. Реализация фильтрации по какому-либо полю клиента
-        /// Задание на 5+++++++. Сортировка  по числу заказов!!!
+        public void FilterClientsByEmail(string searchText)
+        {
+            foreach (IClientView view in views_)
+            {
+                Client client = view.GetClientInfo();
+
+                string clientEmail = client.Mail.ToLower();
+                string text = searchText.ToLower();
+
+                if (clientEmail.Contains(text))
+                {
+                    view.ShowView();
+                }
+                else
+                {
+                    view.HideView();
+                }
+            }
+
+        }
     }
 }

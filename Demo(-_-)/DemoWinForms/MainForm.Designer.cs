@@ -34,6 +34,8 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.SearchByClientNameTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.FilterClientsByEmailTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +53,9 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.SearchByClientNameTextBox});
+            this.SearchByClientNameTextBox,
+            this.toolStripLabel2,
+            this.FilterClientsByEmailTextBox});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
@@ -71,6 +75,19 @@
             this.SearchByClientNameTextBox.Name = "SearchByClientNameTextBox";
             this.SearchByClientNameTextBox.Size = new System.Drawing.Size(100, 25);
             this.SearchByClientNameTextBox.TextChanged += new System.EventHandler(this.SearchByClientNameTextBox_TextChanged);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(160, 22);
+            this.toolStripLabel2.Text = "Поиск по эл.почте клиента:";
+            // 
+            // FilterClientsByEmailTextBox
+            // 
+            this.FilterClientsByEmailTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.FilterClientsByEmailTextBox.Name = "FilterClientsByEmailTextBox";
+            this.FilterClientsByEmailTextBox.Size = new System.Drawing.Size(100, 25);
+            this.FilterClientsByEmailTextBox.TextChanged += new System.EventHandler(this.FilterClientsByEmailTextBox_TextChanged);
             // 
             // MainForm
             // 
@@ -96,6 +113,8 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripTextBox SearchByClientNameTextBox;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripTextBox FilterClientsByEmailTextBox;
     }
 }
 

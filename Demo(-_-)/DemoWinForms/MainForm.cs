@@ -49,5 +49,12 @@ namespace DemoProject
             
             presenter_.SearchClientsByPartialName(searchingText);
         }
+
+        private void FilterClientsByEmailTextBox_TextChanged(object sender, System.EventArgs e)
+        {
+            string searchingText = FilterClientsByEmailTextBox.Text;
+
+            presenter_.FilterClientsByEmail(searchingText);
+        }
     }
 }
