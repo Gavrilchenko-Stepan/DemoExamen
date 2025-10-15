@@ -40,7 +40,7 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TitleLabel.Location = new System.Drawing.Point(14, 15);
+            this.TitleLabel.Location = new System.Drawing.Point(27, 23);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(92, 32);
             this.TitleLabel.TabIndex = 0;
@@ -48,9 +48,9 @@
             // 
             // AvatarBox
             // 
-            this.AvatarBox.Location = new System.Drawing.Point(274, 0);
+            this.AvatarBox.Location = new System.Drawing.Point(223, 0);
             this.AvatarBox.Name = "AvatarBox";
-            this.AvatarBox.Size = new System.Drawing.Size(172, 193);
+            this.AvatarBox.Size = new System.Drawing.Size(232, 200);
             this.AvatarBox.TabIndex = 1;
             this.AvatarBox.TabStop = false;
             // 
@@ -58,7 +58,7 @@
             // 
             this.DescriptionLabel.AutoSize = true;
             this.DescriptionLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DescriptionLabel.Location = new System.Drawing.Point(15, 88);
+            this.DescriptionLabel.Location = new System.Drawing.Point(56, 122);
             this.DescriptionLabel.Name = "DescriptionLabel";
             this.DescriptionLabel.Size = new System.Drawing.Size(63, 25);
             this.DescriptionLabel.TabIndex = 2;
@@ -67,20 +67,20 @@
             // PhoneLabel
             // 
             this.PhoneLabel.AutoSize = true;
-            this.PhoneLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PhoneLabel.Location = new System.Drawing.Point(320, 208);
+            this.PhoneLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PhoneLabel.Location = new System.Drawing.Point(220, 220);
             this.PhoneLabel.Name = "PhoneLabel";
-            this.PhoneLabel.Size = new System.Drawing.Size(42, 16);
+            this.PhoneLabel.Size = new System.Drawing.Size(38, 14);
             this.PhoneLabel.TabIndex = 3;
             this.PhoneLabel.Text = "label1";
             // 
             // MailLabel
             // 
             this.MailLabel.AutoSize = true;
-            this.MailLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MailLabel.Location = new System.Drawing.Point(320, 246);
+            this.MailLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MailLabel.Location = new System.Drawing.Point(357, 220);
             this.MailLabel.Name = "MailLabel";
-            this.MailLabel.Size = new System.Drawing.Size(42, 16);
+            this.MailLabel.Size = new System.Drawing.Size(38, 14);
             this.MailLabel.TabIndex = 4;
             this.MailLabel.Text = "label1";
             // 
@@ -88,14 +88,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.Controls.Add(this.MailLabel);
             this.Controls.Add(this.PhoneLabel);
             this.Controls.Add(this.DescriptionLabel);
             this.Controls.Add(this.AvatarBox);
             this.Controls.Add(this.TitleLabel);
             this.Name = "ClientView";
-            this.Size = new System.Drawing.Size(449, 278);
+            this.Size = new System.Drawing.Size(455, 246);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClientView_MouseClick);
+            this.MouseEnter += new System.EventHandler(this.ClientView_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ClientView_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.AvatarBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

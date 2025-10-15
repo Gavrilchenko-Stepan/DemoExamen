@@ -15,6 +15,20 @@ namespace DemoLib.Models
             c1.Mail = "666@sobaka.ru";
             c1.ImagePath = "../../../Resources/img/Valera.jpg";
 
+            c1.order.AddRecord(new OrderRecord 
+            { NameProduct = "Мешок цемента", 
+                Count = 1, Price = 10000, 
+                SaleDate = new System.DateTime(2025, 10, 1) 
+            });
+
+            c1.order.AddRecord(new OrderRecord
+            {
+                NameProduct = "Саморезы",
+                Count = 100,
+                Price = 100,
+                SaleDate = new System.DateTime(2025, 10, 2)
+            });
+
 
             Client c2 = new Client(2);
             c2.Name = "ОАО ЕПРСТЕЙКА";

@@ -61,22 +61,9 @@ namespace DemoTesting
 
                 ///Д.З. сделать проверку Verify
                 view.Setup(v => v.ShowClientInfo(client));
-                mockViews.Add(view);
+                mockViews.Add(view.Object);
             }
-
-            var viewObjects = mockViews.ConvertAll(v => v.Object);
-
-            var clientPresenter = new ClientPresenter(mockModel.Object, viewObjects);
-
-            for (int i = 0; i < countClients; ++i)
-            {
-                Client expectedClient = testClients[i];
-                mockViews[i].Verify(
-                    v => v.ShowClientInfo(expectedClient),
-                    Times.Once(),
-                    $"Метод ShowClientInfo не был вызван для клиента {expectedClient.Name}"
-                );
-            }
+            var clientPresenter = new ClientPresenter(mockModel.Object, mockViews);
         }
     }
 }

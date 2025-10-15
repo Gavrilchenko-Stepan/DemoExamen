@@ -3,6 +3,8 @@
     public class Client
     {
         private int id_;
+        public Order order = new Order();
+
         public string Name { get; set; }
         public string Description { get; set; }
 
@@ -16,5 +18,7 @@
         {
             id_ = id;
         }
+
+
     }
 }
