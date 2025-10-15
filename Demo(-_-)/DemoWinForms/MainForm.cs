@@ -56,5 +56,10 @@ namespace DemoProject
 
             presenter_.FilterClientsByEmail(searchingText);
         }
+
+        private void toolStripButton1_Click(object sender, System.EventArgs e)
+        {
+            presenter_.SortClientsByOrderCount();
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DemoLib.Models;
 using DemoLib.Views;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DemoLib.Presenters
 {
@@ -8,6 +9,7 @@ namespace DemoLib.Presenters
     {
         private readonly IClientsModel model_;
         private readonly List<IClientView> views_ = new List<IClientView>();
+        private List<Client> allClients_;
         public ClientPresenter(IClientsModel model, List<IClientView> views)
         {
             model_ = model;
@@ -64,7 +66,35 @@ namespace DemoLib.Presenters
                     view.HideView();
                 }
             }
-
         }
+        /// Задание на 5+++++++. Сортировка  по числу заказов!!!
+        public void SortClientsByOrderCount()
+        {
+            if (allClients_ == null || allClients_.Count == 0) return;
+
+            for (int i = 0; i < allClients_.Count - 1; i++)
+            {
+                for (int j = i + 1; j < allClients_.Count; j++)
+                {
+                    int count1 = allClients_[i].order.GetRecords().Count;
+                    int count2 = allClients_[j].order.GetRecords().Count;
+
+                    // Если у j больше заказов чем у i - меняем местами
+                    if (count2 > count1)
+                    {
+                        Client temp = allClients_[i];
+                        allClients_[i] = allClients_[j];
+                        allClients_[j] = temp;
+                    }
+                }
+            }
+
+            for (int i = 0; i < views_.Count && i < allClients_.Count; i++)
+            {
+                views_[i].ShowClientInfo(allClients_[i]);
+                views_[i].ShowView();
+            }
+        }
+
     }
 }

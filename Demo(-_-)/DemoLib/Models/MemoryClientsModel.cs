@@ -21,13 +21,13 @@ namespace DemoLib.Models
                 SaleDate = new System.DateTime(2025, 10, 1) 
             });
 
-            c1.order.AddRecord(new OrderRecord
+            /*c1.order.AddRecord(new OrderRecord
             {
                 NameProduct = "Саморезы",
                 Count = 100,
                 Price = 100,
                 SaleDate = new System.DateTime(2025, 10, 2)
-            });
+            });*/
 
 
             Client c2 = new Client(2);
@@ -36,6 +36,22 @@ namespace DemoLib.Models
             c2.Phone = "666";
             c2.Mail = "777@sobaka.ru";
             c2.ImagePath = "../../../Resources/img/prsteyka.jpg";
+
+            c2.order.AddRecord(new OrderRecord
+            {
+                NameProduct = "Доски",
+                Count = 30,
+                Price = 5000,
+                SaleDate = new System.DateTime(2025, 10, 1)
+            });
+
+            c2.order.AddRecord(new OrderRecord
+            {
+                NameProduct = "Саморезы",
+                Count = 100,
+                Price = 100,
+                SaleDate = new System.DateTime(2025, 10, 2)
+            });
 
             allClients_.Add(c1);
             allClients_.Add(c2);

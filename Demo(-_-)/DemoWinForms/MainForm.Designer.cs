@@ -36,6 +36,7 @@
             this.SearchByClientNameTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.FilterClientsByEmailTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,8 @@
             this.toolStripLabel1,
             this.SearchByClientNameTextBox,
             this.toolStripLabel2,
-            this.FilterClientsByEmailTextBox});
+            this.FilterClientsByEmailTextBox,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
@@ -89,6 +91,16 @@
             this.FilterClientsByEmailTextBox.Size = new System.Drawing.Size(100, 25);
             this.FilterClientsByEmailTextBox.TextChanged += new System.EventHandler(this.FilterClientsByEmailTextBox_TextChanged);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(204, 22);
+            this.toolStripButton1.Text = "Сортировка по количеству заказов";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +127,7 @@
         private System.Windows.Forms.ToolStripTextBox SearchByClientNameTextBox;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripTextBox FilterClientsByEmailTextBox;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 
